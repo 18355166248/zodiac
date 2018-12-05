@@ -106,7 +106,7 @@ Page({
   getUser: function(e) {
     if (e.detail.errMsg.indexOf('ok') > -1) {
       app.globalData.userInfo = e.detail.userInfo
-      wx.redirectTo({
+      wx.navigateTo({
         url: '/pages/problem/problem',
       })
     }
