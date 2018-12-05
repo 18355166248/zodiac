@@ -101,5 +101,14 @@ Page({
         })
       }, 4000 * (8.3 * index / 100))
     })
+  },
+  // 获取用户信息
+  getUser: function(e) {
+    if (e.detail.errMsg.indexOf('ok') > -1) {
+      app.globalData.userInfo = e.detail.userInfo
+      wx.redirectTo({
+        url: '/pages/problem/problem',
+      })
+    }
   }
 })

@@ -2,6 +2,7 @@
   "cloud": true,
   "pages": [
     "pages/login/login",
+    "pages/problem/problem",
     "pages/index/index"
   ],
   "window": {

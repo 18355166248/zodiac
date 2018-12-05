@@ -8,7 +8,7 @@ App({
         env: 'jiang-fe6b92',
         traceUser: true,
       })
-      this.globalData = { isIpx: false }
+      this.globalData = { isIpx: false, userInfo: {} }
       const that = this
 
       // 获取设备信息

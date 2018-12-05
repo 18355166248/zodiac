@@ -19,6 +19,10 @@
     <image src='../../images/txt1.png'></image>
   </view>
   <view id='btn'>
-     <image src="../../images/btn-qa.png"></image>
+    <button 
+    open-type="getUserInfo" class='get-user'
+    lang="zh_CN" bindgetuserinfo="getUser">
+      <image src="../../images/btn-qa.png"></image>
+    </button>
   </view>
 </view>
