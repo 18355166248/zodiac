@@ -1,0 +1,14 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/login/login",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "十二星座",
+    "navigationBarTextStyle": "black"
+  }
+}

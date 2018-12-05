@@ -1,0 +1,24 @@
+<!--pages/login/login.wxml-->
+<view>
+  <!-- 背景图 -->
+  <image src='../../images/bg.png' id='bg'></image>
+  <!-- 标题 -->
+  <view id='title'>
+    <image src='../../images/title.png'></image>
+  </view>
+  <!-- 中心唇膏 -->
+  <view id='main'>
+    <!-- 中心圆 -->
+    <view class='sprint' style="background-position-y: {{bgcPo}}"></view>
+    <!-- 12个唇膏集合 -->
+    <view class='list{{item.num}} list kiss{{index+1}}' wx:for="{{list}}" wx:key="index">
+      <image src='../../images/ele{{index+1}}.png'></image>
+    </view>
+  </view>
+  <view id='title2' style='margin-top:{{btnStyle}}'>
+    <image src='../../images/txt1.png'></image>
+  </view>
+  <view id='btn'>
+     <image src="../../images/btn-qa.png"></image>
+  </view>
+</view>
