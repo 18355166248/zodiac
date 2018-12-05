@@ -1,8 +1,8 @@
 {
   "cloud": true,
   "pages": [
-    "pages/login/login",
     "pages/problem/problem",
+    "pages/login/login",
     "pages/index/index"
   ],
   "window": {

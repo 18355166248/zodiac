@@ -1,18 +1,30 @@
 // pages/problem/problem.js
+var app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    userUrl: '',
+    userName: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    wx.getStorage({
+      key: 'userInfo',
+      success: function (res) {
+        that.setData({
+          userUrl: res.data.avatarUrl,
+          userName: res.data.nickName
+        })
+      },
+    })
   },
 
   /**

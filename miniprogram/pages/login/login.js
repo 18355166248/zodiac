@@ -106,6 +106,10 @@ Page({
   getUser: function(e) {
     if (e.detail.errMsg.indexOf('ok') > -1) {
       app.globalData.userInfo = e.detail.userInfo
+      wx.setStorage({
+        key: 'userInfo',
+        data: e.detail.userInfo
+      })
       wx.navigateTo({
         url: '/pages/problem/problem',
       })

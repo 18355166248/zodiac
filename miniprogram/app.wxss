@@ -3,3 +3,12 @@ view {
   background-position: center center;
   background-size: 100%;
 }
+
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #a5d8f3;
+}
+.txtAlign {
+  text-align: center;
+}
