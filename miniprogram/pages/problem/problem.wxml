@@ -1,6 +1,6 @@
 <!--pages/problem/problem.wxml-->
-<view  id='problem'>
-  <view class='bg' style="background-image: url('../../images/2-bj.png');"></view>
+<view id='problem'>
+  <view class='bg' style="background-image: url('https://raw.githubusercontent.com/18355166248/images-jl/master/2-bj.png');"></view>
   <view class='logo txtAlign'>
     <image src='../../images/2-logo.png'></image>
   </view>
@@ -9,7 +9,27 @@
   </view>
   <view class='txtAlign user-name'>{{userName}}</view>
   <view class='txtAlign title-three'>请 提 问</view>
-  <view class='question'>
-    <text>2019,我会</text><input value='开始了1' type="text"/><text>吗?</text>
+  <view class='question txtAlign'>
+    <text>2019,我会</text>
+    <input value='{{txt}}' focus="{{focus}}" disabled="{{disabled}}" placeholder="(不能超过8个字)" type="text" maxlength="8" />
+    <text>吗?</text>
+  </view>
+  <view class='txtAlign change'>
+    <view catchtap='onQuery'>
+      <text>换一换</text>
+      <text class='iconfont icon-shuaxin'></text>
+    </view>
+  </view>
+  <view class='main'>
+    <view wx:for="{{list}}" class='txtAlign' wx:key="index" style='width:{{item.width}}rpx;height:{{item.width}}rpx;top:{{item.top}};left:{{item.left}}'>
+      <text></text>
+      <text class='{{item.active ? "active" : ""}}' style='width:{{item.width-30}}rpx;height:{{item.width-30}}rpx;' catchtap='toggle' data-active="{{item.active}}" data-type="{{index}}">
+        <text style="font-size:{{item.font}};width:{{item.txtW}};display:inline-block">{{item.ques}}</text>
+      </text>
+    </view>
+  </view>
+  <view class='txtAlign btn_list'>
+    <image src="../../images/2-btn1.png" catchtap='showBlur'></image>
+    <image src="../../images/2-btn2.png" catchtap='nextStep'></image>
   </view>
 </view>

@@ -21,5 +21,20 @@ App({
         }
       })
     }
-  }
+  },
+  onGetOpenid: function () {
+    // 调用云函数
+    const that = this
+    wx.cloud.callFunction({
+      name: 'sum',
+      data: {},
+      success: res => {
+        that.globalData.list = res.result.list
+        console.log(that.globalData.list)
+      },
+      fail: err => {
+        console.error('[云函数] [login] 调用失败', err)
+      }
+    })
+  },
 })
