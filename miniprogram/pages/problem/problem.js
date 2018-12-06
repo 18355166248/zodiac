@@ -153,7 +153,13 @@ Page({
   },
   // 下一步
   nextStep() {
-
+    wx.setStorage({
+      key: 'txt',
+      data: this.data.txt,
+    })
+    wx.navigateTo({
+      url: '/pages/select/select'
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

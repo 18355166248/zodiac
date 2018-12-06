@@ -1,0 +1,8 @@
+<!--component/header.wxml-->
+<view class='logo txtAlign'>
+  <image src='../../images/2-logo.png'></image>
+</view>
+<view class='user-url txtAlign'>
+  <image src='{{userUrl}}'></image>
+</view>
+<view class='txtAlign user-name'>{{userName}}</view>

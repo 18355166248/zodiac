@@ -2,6 +2,7 @@
   "cloud": true,
   "pages": [
     "pages/problem/problem",
+    "pages/select/select",
     "pages/login/login",
     "pages/index/index",
     "pages/databaseGuide/databaseGuide"
