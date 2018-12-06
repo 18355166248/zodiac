@@ -10,6 +10,6 @@
   <view class='txtAlign user-name'>{{userName}}</view>
   <view class='txtAlign title-three'>请 提 问</view>
   <view class='question'>
-    <text>2019,我会</text><input value='开始了' type="text"/><text>吗?</text>
+    <text>2019,我会</text><input value='开始了1' type="text"/><text>吗?</text>
   </view>
 </view>
