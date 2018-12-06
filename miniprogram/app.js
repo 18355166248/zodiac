@@ -1,6 +1,6 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -8,7 +8,10 @@ App({
         env: 'jiang-fe6b92',
         traceUser: true,
       })
-      this.globalData = { isIpx: false, userInfo: {} }
+      this.globalData = {
+        isIpx: false,
+        userInfo: {}
+      }
       const that = this
 
       // 获取设备信息
@@ -20,9 +23,16 @@ App({
           }
         }
       })
+
+      // 加载字体
+      // wx.loadFontFace({
+      //   family: 'DFPSong',
+      //   source: 'url("https://upload.cdn.be-xx.com/12fresh/hkwt.TTF")',
+      //   success: console.log('加载成功')
+      // })
     }
   },
-  onGetOpenid: function () {
+  onGetOpenid: function() {
     // 调用云函数
     const that = this
     wx.cloud.callFunction({

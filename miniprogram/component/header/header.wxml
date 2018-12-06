@@ -6,3 +6,4 @@
   <image src='{{userUrl}}'></image>
 </view>
 <view class='txtAlign user-name'>{{userName}}</view>
+<view class='txtAlign title-three'>{{txt}}</view>

@@ -1,7 +1,6 @@
 /* pages/problem/problem.wxss */
 #problem {
   color: #394481;
-  font-family: 'DFPSong';
 }
 #problem .bg {
   position: fixed;
@@ -11,27 +10,6 @@
   left: 0;
   z-index: -2;
   transform: scale(2, 2);
-}
-#problem .logo {
-  padding-top: 58rpx;
-}
-#problem .logo image {
-  width: 164rpx;
-  height: 76rpx;
-}
-#problem .user-url image {
-  width: 76rpx;
-  height: 76rpx;
-  border-radius: 38rpx;
-  margin: 22rpx 0 10rpx 0;
-}
-#problem .user-name {
-  font-size: 24rpx;
-  margin-bottom: 14rpx;
-}
-#problem .title-three {
-  font-size: 35rpx;
-  margin-bottom: 59rpx;
 }
 #problem .question input, #problem .question text {
   display: inline-block;

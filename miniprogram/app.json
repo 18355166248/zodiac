@@ -1,9 +1,9 @@
 {
   "cloud": true,
   "pages": [
-    "pages/problem/problem",
-    "pages/select/select",
     "pages/login/login",
+    "pages/select/select",
+    "pages/problem/problem",
     "pages/index/index",
     "pages/databaseGuide/databaseGuide"
     

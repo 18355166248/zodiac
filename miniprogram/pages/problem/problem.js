@@ -7,10 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userUrl: '',
-    userName: '',
     txt: '',
-    DFPSong: 'DFPSong',
     list: [],
     bool: true,
     data: ['锦鲤附体', '钱多事少离家近', '欧气爆棚', '一次拍到牌照', '逢奖必中',
@@ -78,21 +75,6 @@ Page({
    */
   onLoad: function (options) {
     var that = this
-    wx.getStorage({
-      key: 'userInfo',
-      success: function (res) {
-        that.setData({
-          userUrl: res.data.avatarUrl,
-          userName: res.data.nickName
-        })
-      },
-    })
-    // 加载字体
-    wx.loadFontFace({
-      family: this.data.DFPSong,
-      source: 'url("https://github.com/18355166248/images-jl/raw/master/DFPSongW7-GB.ttf")',
-      success: console.log
-    })
     this.onQuery()
   },
 
@@ -104,14 +86,16 @@ Page({
     this.setData({
       list: []
     })
-    arr = this.data.data.map((v, i) => i + 1)
+    arr = this.data.data.map((v, i) => i)
     for (var i = 0; i < num; i++) {
       var sub = Math.random() * arr.length
       sub = Math.floor(sub)
-      list.push({
-        ques: this.data.data[sub]
-      })
+      list.push(arr[sub])
       arr.splice(sub, 1)
+    }
+
+    for (var i = 0; i < list.length; i++) {
+      list[i] = {ques: this.data.data[list[i]]}
     }
 
     if (list.length === 4) {
@@ -140,7 +124,10 @@ Page({
         v.active = false
       })
       list[index].active = true
-      this.setData({list, txt:list[index].ques})
+      this.setData({
+        list,
+        txt:list[index].ques,
+        disabled: true})
     }
   },
   // 自定义问题

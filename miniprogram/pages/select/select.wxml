@@ -1,2 +1,4 @@
 <!--pages/select/select.wxml-->
-<text>pages/select/select.wxml</text>
+<view>
+  <component-header txt="请选择你的星座"></component-header>
+</view>

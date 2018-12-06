@@ -1,14 +1,7 @@
 <!--pages/problem/problem.wxml-->
 <view id='problem'>
   <view class='bg' style="background-image: url('https://raw.githubusercontent.com/18355166248/images-jl/master/2-bj.png');"></view>
-  <view class='logo txtAlign'>
-    <image src='../../images/2-logo.png'></image>
-  </view>
-  <view class='user-url txtAlign'>
-    <image src='{{userUrl}}'></image>
-  </view>
-  <view class='txtAlign user-name'>{{userName}}</view>
-  <view class='txtAlign title-three'>请 提 问</view>
+  <component-header txt="请 提 问"></component-header>
   <view class='question txtAlign'>
     <text>2019,我会</text>
     <input value='{{txt}}' focus="{{focus}}" disabled="{{disabled}}" placeholder="(不能超过8个字)" type="text" maxlength="8" />
