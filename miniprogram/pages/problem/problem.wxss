@@ -1,6 +1,7 @@
 /* pages/problem/problem.wxss */
 #problem {
   color: #394481;
+  font-family: 'Song';
 }
 #problem .bg {
   position: fixed;
@@ -9,7 +10,6 @@
   top: 0;
   left: 0;
   z-index: -2;
-  transform: scale(2, 2);
 }
 #problem .question input, #problem .question text {
   display: inline-block;
@@ -66,19 +66,8 @@
   left: 0;
   top: 0;
   border-radius: 50%;
-  animation: fadebg 2000ms infinite;
+  animation: fade 2000ms infinite;
   z-index: -1;
-}
-@keyframes fadebg {
-  0% {
-    opacity: 1
-  }
-  50% {
-    opacity: .1
-  }
-  100% {
-    opacity: 1
-  }
 }
 #problem .main > view > text:last-child{
   background-color: #fff;

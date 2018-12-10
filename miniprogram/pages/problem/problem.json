@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "component-header": "/component/header/header"
-  }
+    "component-header": "/component/header/header",
+    "component-bg": "/component/bg/bg"
+  },
+  "disableScroll": true
 }

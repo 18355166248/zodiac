@@ -1,6 +1,5 @@
 <!--pages/problem/problem.wxml-->
 <view id='problem'>
-  <view class='bg' style="background-image: url('https://raw.githubusercontent.com/18355166248/images-jl/master/2-bj.png');"></view>
   <component-header txt="请 提 问"></component-header>
   <view class='question txtAlign'>
     <text>2019,我会</text>
@@ -26,3 +25,4 @@
     <image src="../../images/2-btn2.png" catchtap='nextStep'></image>
   </view>
 </view>
+<component-bg></component-bg>

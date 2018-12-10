@@ -1,0 +1,86 @@
+/* pages/full/full.wxss */
+#full .question input, #full .question text {
+  display: inline-block;
+  height: 60rpx;
+  font-size: 35rpx;
+  vertical-align: top;
+  line-height: 60rpx;
+}
+#full .question input {
+  border-bottom: 2px solid #3a457e;
+  width: 300rpx;
+}
+#full .ask_txt {
+  margin: 50rpx 0 37rpx 0;
+  font-size: 30rpx;
+}
+.bg_img image {
+  width: 79rpx;
+  height: 254rpx;
+  position: fixed;
+}
+.bg_img image:first-child  {
+  transform: rotate(-30deg);
+  right: 10rpx;
+  top: 425rpx;
+}
+.bg_img image:last-child {
+  transform: rotate(-150deg);
+  top: 982rpx;
+  left: 10rpx;
+}
+#full .main {
+  padding: 0 38rpx;
+  position: relative;
+  height: 650rpx;
+}
+#full .main > view {
+  position: absolute;
+  z-index: 20;
+}
+#full .main > view image {
+  width: 150rpx;
+  height: 150rpx;
+}
+#full .main .box {
+  position: absolute;
+  width: 310rpx;
+  height: 310rpx;
+  top: 169rpx;
+  left: 220rpx;
+  opacity: 0;
+  transform: rotate(45deg);
+  animation: fa 500ms 500ms forwards;
+}
+#full .main .box image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+@keyframes fa {
+  100% {
+    opacity: 1;
+  }
+}
+#full .main .box > view {
+  width: 100%;
+  height: 100%;
+  animation: r1 1s 1s forwards;
+}
+#full .main > .box > view image:last-child {
+  animation: r2 1}
+  #full .main > .box > view image:last-child {
+    animation: r2 1s 2s forwards;
+}
+@keyframes r1 {
+  100% {
+    transform: rotate(30deg);
+  }
+}
+@keyframes r2 {
+  100% {
+    transform: rotate(30deg);
+  }
+}

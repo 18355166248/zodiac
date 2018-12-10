@@ -76,6 +76,7 @@ Page({
   onLoad: function (options) {
     var that = this
     this.onQuery()
+    this.loadFont()
   },
 
   onQuery: function () {
@@ -141,11 +142,21 @@ Page({
   // 下一步
   nextStep() {
     wx.setStorage({
-      key: 'txt',
+      key: 'ques',
       data: this.data.txt,
     })
     wx.navigateTo({
       url: '/pages/select/select'
+    })
+  },
+  // 加载字体
+  loadFont() {
+    wx.loadFontFace({
+      family: 'Song',
+      source: 'url("https://upload.cdn.be-xx.com/12fresh/hkwt.TTF")',
+      fail(res) {
+        console.log('加载失败')
+      },
     })
   },
   /**

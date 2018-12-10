@@ -1,4 +1,18 @@
 <!--pages/select/select.wxml-->
-<view>
+<view id='select'>
   <component-header txt="请选择你的星座"></component-header>
+  <view class='main'>
+    <view wx:for="{{list}}" wx:key="index" catchtap='toggle' data-type="{{index}}" data-active="{{item.active}}">
+      <image src="{{baseurl}}constellation/{{item.url}}.png" ></image>
+      <image src="{{baseurl}}constellation/{{item.url2}}.png" wx:if="{{item.active}}"></image>
+    </view>
+  </view>
+  <view class='txtAlign show_style'>
+    <image src="{{baseurl}}constellation/start-{{index}}.png"></image>
+    <image src="{{baseurl}}constellation/const-{{index}}.png"></image>
+  </view>
+  <view class='txtAlign show_btn'>
+    <image src="{{baseurl}}constellation/test-btn.jpg" catchtap='nextStep'></image>
+  </view>
 </view>
+<component-bg></component-bg>

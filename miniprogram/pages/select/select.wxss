@@ -1,1 +1,49 @@
 /* pages/select/select.wxss */
+#select {
+  font-family: 'Song';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#select .main {
+  padding: 0 72rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#select .main > view {
+  width: 114rpx;
+  height: 114rpx;
+  margin-right: 47rpx;
+  margin-bottom: 27rpx;
+  position: relative;
+}
+#select .main > view:nth-child(4n) {
+  margin-right: 0;
+}
+#select .main > view > image {
+  width: 100%;
+  height: 100%;
+}
+#select .main > view > image:last-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#select .show_style {
+  position: relative;
+}
+#select .show_style image {
+  width: 635rpx;
+  height: 315rpx;
+}
+#select .show_style image:first-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: fade 4000ms 500ms infinite;
+}
+#select .show_btn image {
+  width: 210rpx;
+  height: 61rpx;
+}

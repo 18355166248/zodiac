@@ -7,6 +7,14 @@ Component({
     txt: {
       type: String,
       value: ''
+    },
+    txt2: {
+      type: String,
+      value: ''
+    },
+    txt3: {
+      type: String,
+      value: ''
     }
   },
 

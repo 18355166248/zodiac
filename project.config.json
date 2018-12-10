@@ -28,18 +28,25 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
-					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide",
+					"id": 0,
+					"name": "select",
+					"pathName": "pages/select/select",
 					"query": ""
 				},
 				{
 					"id": -1,
 					"name": "problem",
-					"pathName": "pages/problem/problem"
+					"pathName": "pages/problem/problem",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "full",
+					"pathName": "pages/full/full",
+					"query": ""
 				}
 			]
 		}

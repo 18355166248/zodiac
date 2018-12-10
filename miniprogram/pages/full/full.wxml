@@ -1,0 +1,28 @@
+<!--pages/full/full.wxml-->
+<view id='full'>
+  <component-header txt2="{{txt2}}" txt3='问'></component-header>
+  <view class='question txtAlign'>
+    <text>2019,我会</text>
+    <input value='{{ques}}' disabled="true" type="text" maxlength="8" />
+    <text>吗?</text>
+  </view>
+  <view class='txtAlign ask_txt'>占星大师苏珊·米勒答:</view>
+  <view class='main'>
+    <view wx:for="{{list}}" wx:key="index" style='top:{{item.y}}rpx;left:{{item.x}}rpx;'>
+      <image src="{{baseUrl}}answer/xz{{index+1}}.png"></image>
+    </view>
+    <!-- 三个正方形框 -->
+    <view class='box'>
+      <image class='rac' src="{{baseUrl}}answer/rect-1.png"></image>
+      <view >
+        <image src="{{baseUrl}}answer/rect-1.png"></image>
+        <image src="{{baseUrl}}answer/rect-1.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<component-bg></component-bg>
+<view class='bg_img' wx:if="{{imgNum}}">
+  <image src="{{baseUrl}}answer/lipstick-{{imgNum}}.png" class='active'></image>
+  <image src="{{baseUrl}}answer/lipstick-{{imgNum}}.png" class='active'></image>
+</view>

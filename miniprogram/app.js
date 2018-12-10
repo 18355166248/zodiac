@@ -23,13 +23,6 @@ App({
           }
         }
       })
-
-      // 加载字体
-      // wx.loadFontFace({
-      //   family: 'DFPSong',
-      //   source: 'url("https://upload.cdn.be-xx.com/12fresh/hkwt.TTF")',
-      //   success: console.log('加载成功')
-      // })
     }
   },
   onGetOpenid: function() {

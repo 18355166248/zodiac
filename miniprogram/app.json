@@ -5,6 +5,7 @@
     "pages/select/select",
     "pages/problem/problem",
     "pages/index/index",
+    "pages/full/full",
     "pages/databaseGuide/databaseGuide"
     
   ],

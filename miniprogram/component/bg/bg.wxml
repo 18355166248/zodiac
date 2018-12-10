@@ -1,0 +1,6 @@
+<!--component/bg.wxml-->
+<image class='bg' src="{{baseurl}}constellation/bg.jpg"></image>
+<image class='bg bg1' src="{{baseurl}}question/star1.png"></image>
+<image class='bg bg2' src="{{baseurl}}question/star2.png"></image>
+<image class='bg bg3' src="{{baseurl}}question/star3.png"></image>
+<image class='bg bg4' src="{{baseurl}}question/star4.png"></image>
