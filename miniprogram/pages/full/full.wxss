@@ -38,19 +38,35 @@
   position: absolute;
   z-index: 20;
 }
-#full .main > view image {
+#full .main > view.circle image {
   width: 150rpx;
   height: 150rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* #full .main > view image:last-child {
+  opacity: 0;
+} */
+#full .main > view image:last-child.animation {
+  animation: toggle 300ms forwards;
+}
+@keyframes toggle {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 #full .main .box {
   position: absolute;
-  width: 310rpx;
-  height: 310rpx;
-  top: 169rpx;
-  left: 220rpx;
+  width: 280rpx;
+  height: 280rpx;
+  top: 180rpx;
+  left: 238rpx;
   opacity: 0;
   transform: rotate(45deg);
-  animation: fa 500ms 500ms forwards;
 }
 #full .main .box image {
   position: absolute;
@@ -59,20 +75,23 @@
   top: 0;
   left: 0;
 }
+#full .main .animate {
+  animation: fa 500ms 500ms forwards;
+}
 @keyframes fa {
   100% {
     opacity: 1;
   }
 }
-#full .main .box > view {
+#full .main .box > view.border {
   width: 100%;
   height: 100%;
+}
+#full .main .box.animate > view.border {
   animation: r1 1s 1s forwards;
 }
-#full .main > .box > view image:last-child {
-  animation: r2 1}
-  #full .main > .box > view image:last-child {
-    animation: r2 1s 2s forwards;
+#full .main > .box.animate > view.border image:last-child {
+  animation: r2 1s 2s forwards;
 }
 @keyframes r1 {
   100% {
@@ -82,5 +101,35 @@
 @keyframes r2 {
   100% {
     transform: rotate(30deg);
+  }
+}
+#full .main .box .title {
+  width: 300rpx;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -10px;
+  transform: rotate(-45deg);
+  text-align: center;
+}
+#full .main .box .title > view {
+  color: #394481;
+}
+#full .main .box .title > view {
+  font-size: 25rpx;
+  margin-bottom: 13rpx;
+  opacity: 0;
+}
+#full .main .box .title > view.fadeShow {
+  animation: fadeShow 800ms forwards;
+}
+#full .main .box .title > view:first-child {
+  font-size: 48rpx;
+  margin: 50rpx 0 38rpx 0;
+}
+@keyframes fadeShow {
+  100% {
+    opacity: 1;
+    transform: translateY(4px);
   }
 }

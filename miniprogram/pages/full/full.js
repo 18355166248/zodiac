@@ -11,21 +11,25 @@ Page({
     ques: '',
     imgNum: null,
     list: [
-      { x: 0, y: 0 },
-      { x: 0, y: 0 },
-      { x: 0, y: 0 },
-      { x: 0, y: 0 },
-      { x: 0, y: 0 },
-      { x: 0, y: 0 },
-      { x: 0, y: 0 },
-      { x: 0, y: 0 },
-      { x: 0, y: 0 },
-      { x: 0, y: 0 },
-      { x: 0, y: 0 },
-      { x: 0, y: 0 },
+      { x: 0, y: 0, show: false },
+      { x: 0, y: 0, show: false },
+      { x: 0, y: 0, show: false },
+      { x: 0, y: 0, show: false },
+      { x: 0, y: 0, show: false },
+      { x: 0, y: 0, show: false },
+      { x: 0, y: 0, show: false },
+      { x: 0, y: 0, show: false },
+      { x: 0, y: 0, show: false },
+      { x: 0, y: 0, show: false },
+      { x: 0, y: 0, show: false },
+      { x: 0, y: 0, show: false },
     ],
     showTwo: false,
-    showThree: false
+    showThree: false,
+    animate: '',
+    txt: false,
+    one: false,
+    table: ['txt', 'one', 'two', 'three', 'four']
   },
 
   /**
@@ -53,7 +57,7 @@ Page({
   // 求坐标
   getXY() {
     let list = this.data.list
-    const xCenter = 300, yCenter = 250, R = 250
+    const xCenter = 300, yCenter = 250, R = 240
 
     const deg = 360 / this.data.list.length
     const r1 = wx.getStorageSync('r1') - 1
@@ -64,7 +68,7 @@ Page({
       list[i].x = x
       list[i].y = y
     })
-    this.setData({list})
+    this.setData({list, r1})
   },
   // 加载字体
   loadFont() {
@@ -80,9 +84,41 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    this.setData({animate: 'animate'})
+    const that = this
+    const index = this.data.r1
+    let list = this.data.list
 
+    list.forEach((v, i) => {
+      let i1 = i1
+      let i2 = i + index
+      let time = 3000 + i * 300
+      if (i2 > 11) {
+        i2 = i2 - list.length
+      }
+      setTimeout(() => {
+        list[i2].show = true
+        that.setData({ list })
+        setTimeout(() => {
+          list[i2].show = false
+          that.setData({ list })
+        }, 300)
+      }, time)
+    })
+    setTimeout(() => {
+      list[index].show = true
+      that.setData({ list })
+      that.showTxt()
+    }, 3000 + 12 * 300)
   },
-
+  showTxt() {
+    const that = this
+    this.data.table.forEach((vv, ii) => {
+      setTimeout(() => {
+        that.setData({ [vv]: true })
+      }, 400*(ii+1))
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

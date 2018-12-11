@@ -8,13 +8,21 @@
   </view>
   <view class='txtAlign ask_txt'>占星大师苏珊·米勒答:</view>
   <view class='main'>
-    <view wx:for="{{list}}" wx:key="index" style='top:{{item.y}}rpx;left:{{item.x}}rpx;'>
+    <view class='circle' wx:for="{{list}}" wx:key="index" style='top:{{item.y}}rpx;left:{{item.x}}rpx;'>
       <image src="{{baseUrl}}answer/xz{{index+1}}.png"></image>
+      <image src="{{baseUrl}}answer/xz{{index+1}}_on.png" style='display:{{item.show?"block":"none"}}'></image>
     </view>
     <!-- 三个正方形框 -->
-    <view class='box'>
+    <view class='box {{animate}}'>
       <image class='rac' src="{{baseUrl}}answer/rect-1.png"></image>
-      <view >
+      <view class='title'>
+        <view class='{{txt ? "fadeShow" : ""}}'>{{data.txt}}</view>
+        <view class='{{one ? "fadeShow" : ""}}'>{{data.one}}</view>
+        <view class='{{two ? "fadeShow" : ""}}'>{{data.two}}</view>
+        <view class='{{three ? "fadeShow" : ""}}'>{{data.three}}</view>
+        <view class='{{four ? "fadeShow" : ""}}'>{{data.four}}</view>
+      </view>
+      <view class='border'>
         <image src="{{baseUrl}}answer/rect-1.png"></image>
         <image src="{{baseUrl}}answer/rect-1.png"></image>
       </view>
